@@ -7,8 +7,4 @@ public class SQLiteDB extends Database{
         super(file);
     }
 
-    @Override
-    public Type getType() {
-        return Type.SQLite;
-    }
 }
