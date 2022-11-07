@@ -2,9 +2,6 @@ package me.gameisntover.database;
 
 import java.io.File;
 import java.sql.*;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 public abstract class Database {
     protected Connection con;
