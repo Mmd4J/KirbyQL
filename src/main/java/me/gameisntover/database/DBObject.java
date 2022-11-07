@@ -1,24 +1,29 @@
 package me.gameisntover.database;
 
-import java.util.Locale;
-
 public class DBObject<T> {
-    protected T value;
-    protected String name;
+    public T value;
+    public String name;
 
-    protected boolean primaryKey;
-    protected DBObject(String name, T obj,boolean pk) {
+    public boolean primaryKey;
+
+    public boolean doNotUpdate;
+    protected DBObject(String name, T obj,boolean pk,boolean doNotUpdate) {
         this.name = name;
         this.value = obj;
         this.primaryKey = pk;
+        this.doNotUpdate = doNotUpdate;
     }
 
     public static <T> DBObject<T> of(String name, T value) {
-        return of(name.toUpperCase(Locale.ROOT), value,false);
+        return of(name, value,false);
     }
     public static <T> DBObject<T> of(String name, T value,boolean primaryKey) {
-        return new DBObject<>(name.toUpperCase(Locale.ROOT), value,primaryKey);
+        return of(name, value,primaryKey,false);
     }
+    public static <T> DBObject<T> of(String name, T value,boolean primaryKey,boolean doNotUpdate) {
+        return new DBObject<>(name, value,primaryKey,doNotUpdate);
+    }
+
 
     public T get() {
         return value;

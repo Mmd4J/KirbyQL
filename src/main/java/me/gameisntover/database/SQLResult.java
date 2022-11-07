@@ -1,5 +1,6 @@
 package me.gameisntover.database;
 
+
 import lombok.SneakyThrows;
 
 import java.sql.ResultSet;

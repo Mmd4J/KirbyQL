@@ -23,7 +23,7 @@ public abstract class Database {
     }
 
     public void createNewTable(String tableName, DBObject<String>... types) {
-        StringBuilder builder = new StringBuilder("CREATE TABLE IF NOT EXISTS" + tableName + "(");
+        StringBuilder builder = new StringBuilder("CREATE TABLE IF NOT EXISTS " + tableName + "(");
         for (DBObject<String> obj : types) {
             builder.append(obj.name).append(" ").append(obj.value);
             if (obj.primaryKey) builder.append("PRIMARY KEY ");
@@ -67,17 +67,25 @@ public abstract class Database {
     }
 
     public void updateData(String tableName, DBObject<?>... objects) {
-        StringBuilder builder1 = new StringBuilder("UPDATE OR IGNORE ").append(tableName).append("SET ");
-        StringBuilder builder2 = new StringBuilder(" WHERE ");
+        StringBuilder builder1 = new StringBuilder("UPDATE OR IGNORE ").append(tableName).append(" SET ");
+        StringBuilder builder2 = new StringBuilder();
         for (DBObject<?> obj : objects) {
-            builder1.append(obj.name);
-            builder2.append(obj.value.toString());
-            if (objects[objects.length - 1].equals(obj)) {
-                builder1.append(")");
-                builder2.append(");");
-            } else {
-                builder1.append(",");
-                builder2.append(",");
+            if (obj.doNotUpdate){
+                if (builder2.toString().length() == 0) builder2 = new StringBuilder(" WHERE ");
+                builder2.append(obj.name).append("=").append(obj.value.toString());
+                if (objects[objects.length - 1].equals(obj)) {
+                    builder2.append(";");
+                } else {
+                    builder2.append(",");
+                }
+            }
+            else {
+                builder1.append(obj.name).append("=").append(obj.value.toString());
+                if (objects[objects.length - 1].equals(obj)) {
+                    builder2.append(";");
+                } else {
+                    builder1.append(",");
+                }
             }
         }
         String sql = builder1.append(builder2).toString();
@@ -93,12 +101,12 @@ public abstract class Database {
     public SQLResult selectData(String tableName, DBObject<?>... primaryKeys) {
         StringBuilder b1 = new StringBuilder("SELECT * FROM " + tableName + " WHERE ");
         for (DBObject<?> obj : primaryKeys) {
-        b1.append(obj.name).append("=").append(obj.value).append(" ");
-        if (!primaryKeys[primaryKeys.length-1].equals(obj)){
-            b1.append(",");
-        }else {
-            b1.append(";");
-        }
+            b1.append(obj.name).append("=").append(obj.value).append(" ");
+            if (!primaryKeys[primaryKeys.length-1].equals(obj)){
+                b1.append(",");
+            }else {
+                b1.append(";");
+            }
         }
         SQLResult sr;
         try {
