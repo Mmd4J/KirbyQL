@@ -1,5 +1,5 @@
 Welcome to the SQLAPI page. 👋
-Here's how to use api : \n
+Here's how to use api : 
 **Gradle:
 ```gradle
 	allprojects {
