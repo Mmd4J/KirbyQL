@@ -26,7 +26,7 @@ public abstract class Database {
         StringBuilder builder = new StringBuilder("CREATE TABLE IF NOT EXISTS " + tableName + "(");
         for (DBObject<String> obj : types) {
             builder.append(obj.name).append(" ").append(obj.value);
-            if (obj.primaryKey) builder.append("PRIMARY KEY ");
+            if (obj.primaryKey) builder.append(" AS PRIMARY KEY ");
             if (types[types.length - 1].equals(obj))
                 builder.append(")");
             else builder.append(",");

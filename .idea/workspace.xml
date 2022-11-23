@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ab11b0c-7469-479a-9d93-ec2b17dadbc7" name="Changes" comment="Main functions must now work">
+    <list default="true" id="9ab11b0c-7469-479a-9d93-ec2b17dadbc7" name="Changes" comment="Everything should work now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,12 +36,17 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/GitHub/XPaper&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/GitHub/SQLApi/SQLApi/src/main/java/me/gameisntover/database&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GitHub\SQLApi\SQLApi\src\main\java\me\gameisntover\database" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667817875081</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Everything should work now">
+      <created>1667826736541</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667826736541</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,6 +101,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create new table method must now work" />
     <MESSAGE value="Main functions must now work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main functions must now work" />
+    <MESSAGE value="Everything should work now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Everything should work now" />
   </component>
 </project>
