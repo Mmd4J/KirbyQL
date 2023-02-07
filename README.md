@@ -15,7 +15,7 @@ Welcome to the SQLAPI page. 👋
 	}
 ```
 **Maven**
-```maven
+```xml
 	<repositories>
 		<repository>
 		    <id>jitpack.io</id>
@@ -23,7 +23,7 @@ Welcome to the SQLAPI page. 👋
 		</repository>
 	</repositories>
 ``` 
-```maven
+```xml
 	<dependency>
 	    <groupId>com.github.GaMeIsNtOvEr</groupId>
 	    <artifactId>SQLApi</artifactId>
