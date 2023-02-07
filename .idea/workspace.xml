@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ab11b0c-7469-479a-9d93-ec2b17dadbc7" name="Changes" comment="Everything should work now">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/gameisntover/database/DatabaseInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9ab11b0c-7469-479a-9d93-ec2b17dadbc7" name="Changes" comment="BugFix and some new features">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/gameisntover/database/DBObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/gameisntover/database/DBObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/gameisntover/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/gameisntover/database/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/gameisntover/database/SQLResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/gameisntover/database/SQLResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/gameisntover/database/SQLiteDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +23,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,7 +37,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/GitHub/SQLApi/SQLApi/src/main/java/me/gameisntover/database",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -107,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669198876030</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="BugFix and some new features">
+      <created>1675778118548</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675778118548</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +124,7 @@
     <MESSAGE value="create new table method must now work" />
     <MESSAGE value="Main functions must now work" />
     <MESSAGE value="Everything should work now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Everything should work now" />
+    <MESSAGE value="BugFix and some new features" />
+    <option name="LAST_COMMIT_MESSAGE" value="BugFix and some new features" />
   </component>
 </project>
