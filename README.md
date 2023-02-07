@@ -30,4 +30,4 @@ Welcome to the SQLAPI page. 👋
 	    <version>Tag</version>
 	</dependency
 ```
-See <a url="https://github.com/GaMeIsNtOvEr/SQLAPI/wiki">Wiki</a> for more info
+See <a value="https://github.com/GaMeIsNtOvEr/SQLAPI/wiki">Wiki</a> for more info
