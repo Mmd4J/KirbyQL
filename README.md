@@ -14,3 +14,19 @@ Welcome to the SQLAPI page. 👋
 	        implementation 'com.github.GaMeIsNtOvEr:SQLAPI:Tag'
 	}
 ```
+**Maven**
+```maven
+<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+``` 
+```maven
+	<dependency>
+	    <groupId>com.github.GaMeIsNtOvEr</groupId>
+	    <artifactId>SQLApi</artifactId>
+	    <version>Tag</version>
+	</dependency
+```
