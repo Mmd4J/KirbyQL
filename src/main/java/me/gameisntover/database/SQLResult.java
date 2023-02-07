@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class SQLResult {
-    private ResultSet rs;
+    private final ResultSet rs;
     private Statement stmt;
 
     protected SQLResult(ResultSet rs) {
@@ -23,7 +23,7 @@ public class SQLResult {
 
     @SneakyThrows
     public boolean isNull() {
-        return rs == null || stmt == null || rs.isClosed();
+        return rs == null || stmt.getConnection() == null || stmt == null || rs.isClosed();
     }
 
     public ResultSet getResultSet() {
@@ -36,7 +36,8 @@ public class SQLResult {
 
     @SneakyThrows
     public void close() {
-        if (stmt != null) getStatement().close();
+        stmt.getConnection().close();
         if (rs != null && !rs.isClosed()) getResultSet().close();
+        if (stmt != null) getStatement().close();
     }
 }
