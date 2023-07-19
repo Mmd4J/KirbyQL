@@ -1,6 +1,8 @@
-package me.gameisntover.database;
+package me.gameisntover.kirbyql.object;
 
-public class DBObject<T> {
+import java.util.Map;
+
+public class DBObject<T> implements Map.Entry<String,T> {
     public T value;
     public String name;
     public String type;
@@ -31,18 +33,32 @@ public class DBObject<T> {
         return of(name, value, primaryKey, false);
     }
 
-    public static <T> DBObject<T> of(DBObject<String> obj,T value) {
+    public static <T> DBObject<T> of(DBObject<String> obj, T value) {
         return new DBObject<>(obj.name, value, obj.primaryKey, obj.doNotUpdate);
     }
+
     public static <T> DBObject<T> of(String name, T value, boolean primaryKey, boolean doNotUpdate) {
         return new DBObject<>(name, value, primaryKey, doNotUpdate);
     }
 
-    public DBObject<?> clone(Object value){
-        return of((DBObject<String>) this,value);
+    public DBObject<?> clone(java.io.Serializable value) {
+        return of((DBObject<String>) this, value);
     }
-    public T get() {
+
+
+    @Override
+    public String getKey() {
+        return name;
+    }
+
+    @Override
+    public T getValue() {
         return value;
     }
 
+    @Override
+    public T setValue(T value) {
+        this.value = value;
+        return value;
+    }
 }

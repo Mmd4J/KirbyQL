@@ -1,4 +1,4 @@
-package me.gameisntover.database;
+package me.gameisntover.kirbyql.database;
 
 
 import lombok.SneakyThrows;
@@ -7,11 +7,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class SQLResult {
+public class KirbyResult {
     private final ResultSet rs;
     private Statement stmt;
 
-    protected SQLResult(ResultSet rs) {
+    public KirbyResult(ResultSet rs) {
         this.rs = rs;
         try {
             if (rs != null && !rs.isClosed())

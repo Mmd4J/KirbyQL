@@ -1,7 +1,11 @@
-package me.gameisntover.database;
+package me.gameisntover.kirbyql.database;
+
+import lombok.experimental.SuperBuilder;
+import me.gameisntover.kirbyql.database.Database;
 
 import java.io.File;
 
+@SuperBuilder
 public class DatabaseInfo {
     private final Database.Type databaseType;
     private String name;
@@ -11,6 +15,26 @@ public class DatabaseInfo {
     private int port;
 
     private File file;
+
+
+    public DatabaseInfo(File file) {
+        databaseType = Database.Type.SQLite;
+        this.file = file;
+    }
+
+    public DatabaseInfo() {
+        this.databaseType = Database.Type.MariaDB;
+    }
+
+    public DatabaseInfo(String name, String address, int port, String user, String pass) {
+        this.name = name;
+        this.address = address;
+        this.port = port;
+        this.user = user;
+        this.pass = pass;
+        this.databaseType = Database.Type.MariaDB;
+    }
+
     public int getPort() {
         return port;
     }
@@ -37,19 +61,5 @@ public class DatabaseInfo {
 
     public File getFile() {
         return file;
-    }
-
-    public DatabaseInfo(File file){
-        databaseType = Database.Type.SQLite;
-        this.file = file;
-    }
-
-    public DatabaseInfo(String name,String address,int port,String user,String pass){
-        this.name = name;
-        this.address = address;
-        this.port = port;
-        this.user = user;
-        this.pass = pass;
-        this.databaseType = Database.Type.MySQL;
     }
 }
